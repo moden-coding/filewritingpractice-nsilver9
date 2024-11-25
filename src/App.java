@@ -11,6 +11,7 @@ public class App {
         namesList.add("Charlie");
         namesList.add("Diana");
         namesList.add("Ethan");
+        namesList.add("Noah");
 
         // File path where the names will be written
         String filePath = "names.txt";
@@ -18,8 +19,9 @@ public class App {
         // Create a PrintWriter object for writing to the file
         try(PrintWriter writer = new PrintWriter(filePath)) {
             // TODO: Write code here to iterate through the ArrayList and write each name to the file
-
-            
+            for(String names: namesList) {
+                writer.println(names);
+            }
             // Close the PrintWriter
             writer.close();
             System.out.println("Names written to file successfully.");
